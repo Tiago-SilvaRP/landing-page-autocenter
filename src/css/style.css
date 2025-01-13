@@ -1,0 +1,395 @@
+html {
+    font-size: 62.5%
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.header {
+    grid-area: header;
+    background-color: #077FFF;
+}
+
+.header .header-container {
+    display: flex;
+    padding: 20px 40px;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 7.5%;
+}
+
+.header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.header a:hover h1 {
+    color: coral;
+}
+
+
+.hero {
+    grid-area: hero;
+    height: 92vh;
+    background: url("../images/oficina-mecanica-organizada.jpg") center center no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero h2 {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin: 0 64% 0 4%;
+    color: #fff;
+    background-color: #077FFF;
+    border-radius: 5px;
+}
+
+.hero:after {
+    content: url("../images/arrow_22x40_coral.png");
+    position: absolute;
+    rotate: 180deg;
+    height: 35px;
+    bottom: 10px;
+    animation: downarrow 0.6s infinite alternate ease-in-out;
+}
+
+@keyframes downarrow {
+    0% {
+        -webkit-transform: translateY(0);
+        opacity: 0.4;
+    }
+
+    100% {
+        -webkit-transform: translateY(0.4em);
+        opacity: 0.9;
+    }
+}
+
+@media(max-width: 425px) {
+    .hero {
+        height: 60vh;
+    }
+
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+}
+
+
+.about {
+    display: flex;
+    background-color: #fff;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.about .sobre {
+    display: flex;
+    padding: 2% 2% ;
+    flex-direction: column;
+}
+
+.about .sobre h3 {
+    font-weight: 700;
+    font-size: 4rem;
+    color: coral;
+}
+
+.about .sobre .valores{
+    list-style-type: disc;
+    list-style-position: inside;
+    margin: 20px 0;
+    font-weight: 400;
+}
+
+.about .sobre li::marker{
+    color: coral;
+}
+
+.about .sobre p {
+    font-size: 1.8rem;
+    margin: 2% 0;
+    font-weight: 400;
+}
+
+.about .sobre  span{
+    font-weight: 700;
+}
+
+.about .image {
+    height: 100%;
+    min-width: 50%;
+}
+
+.about .sobre .btn-know-more {
+    font-size: 1.6rem;
+    align-self: flex-start;
+    font-weight: 600;
+    color: coral;
+    margin-top: 2%;
+}
+
+.about .sobre .btn-know-more:hover {
+    font-weight: 700;
+}
+
+.about .image.rigth {
+    background: url('../images/Gestao-de-oficina-mecanica_-como-otimizar-a-rotina-de-trabalho_.png') center center no-repeat;
+    background-size: cover;
+}
+
+
+@media (max-width: 425px) {
+    .about .sobre {
+        text-align: center;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+.services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.services .service {
+    margin: 20px 0;
+    padding:3% 2% 3% 0;
+    flex-wrap: wrap;
+}
+
+.services .service img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+.services .service h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: coral;
+    text-align: center;
+}
+
+.services .service p {
+    font-size: 2rem;
+    font-weight: 400;
+    max-width: 400px;
+    margin-top: 20px;
+    line-height: 25px;
+}
+
+.services .service span{
+    color: coral;
+    font-weight: 500;
+}
+
+.promocao {
+    background: linear-gradient(to bottom, coral, #077FFF) ;
+    background-size: contain;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.promocao img {
+    height: 100%;
+}
+
+.promocao a:hover{
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+
+.mensagem{
+    width: 300px;
+    height: 110px;
+    color: #ffffff;
+    margin-right: 60px;
+}
+
+.promocao .mensagem .titulo{
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    animation: promocao 0.8s infinite alternate ease-in-out;
+}
+
+@keyframes promocao {
+    0% {
+        opacity: 0.5;
+    }
+    
+    100% {
+        opacity: 0.9;
+        color: #3CCC87;
+    }
+}
+
+.mensagem .texto{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.caixa-formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 340px;
+    min-height: 380px;
+    background-color: #ffffff;
+    padding: 20px 0;
+}
+
+.formulario{
+    margin-bottom: 15px;
+}
+
+.caixa-formulario input{
+    height: 35px;
+    border: solid 1px;
+    padding: 10px;
+}
+
+textarea::placeholder,
+input::placeholder{
+    color: #A8A8A8;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.caixa-formulario textarea{
+    border: solid 1px;
+    height: 100px;
+    padding: 10px;
+}
+
+.caixa-formulario input,
+textarea, .btn{
+    width: 298px;
+    border-radius: 5px;
+}
+
+.caixa-formulario .obrigatorio{
+    display: flex;
+    align-self: flex-start;
+    margin-left: 20px;
+    margin-top: 7px;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.btn{
+    height: 41px;
+    color: #ffffff;
+    background-color: #3CCC87;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.caixa-formulario .erro{
+    display: flex;
+    align-self: flex-start;
+    font-size: 10px;
+    color: #F52E2E;
+    margin-bottom: -10px;
+    display: none;
+    font-weight: 400;
+}
+
+.caixa-formulario .vermelho{
+    border: solid 1px #F52E2E;
+}
+
+.caixa-formulario .verde{
+    border: solid 1px #00C22B;
+}
+
+.promocao .promocoes{
+    text-align: center;
+    color: #ffff;
+    margin-left: 5%;
+    width: 30%;
+}
+
+.promocao .promocoes h3{
+    font-weight: 600;
+}
+
+
+.footer {
+    display: flex;
+    background-color: #ff7f50;
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.footer .social{
+    display: flex;
+    justify-content: center;
+}
+
+.footer h4{
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.footer nav {
+    margin: 50px 0;
+}
+
+.footer nav ul {
+    display: flex;
+    justify-content: center;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.footer nav ul a{
+    font-weight: 500;
+    font-size: 2rem;
+    margin: 20px;
+}
+
+.footer nav ul li a:hover{
+    font-weight: 700;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.footer .social i {
+    font-size: 2rem;
+}
+
+.footer .social a{
+    margin: 20px;
+}
+
+.footer .social a:hover{
+    color: #fff;
+    transition: 0,3s;
+}
