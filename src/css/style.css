@@ -20,7 +20,7 @@ body {
     padding: 20px 40px;
     justify-content: space-between;
     align-items: center;
-    min-height: 7.5%;
+    min-height: 75px;
 }
 
 .header h1 {
@@ -149,7 +149,6 @@ body {
     background-size: cover;
 }
 
-
 @media (max-width: 425px) {
     .about .sobre {
         text-align: center;
@@ -161,6 +160,7 @@ body {
     }
 }
 
+/* SECTION SERVICES */
 
 .services {
     display: flex;
@@ -201,6 +201,8 @@ body {
     color: coral;
     font-weight: 500;
 }
+
+/* SECTION PROMOCAO */
 
 .promocao {
     background: linear-gradient(to bottom, coral, #077FFF) ;
@@ -338,58 +340,85 @@ textarea, .btn{
     font-weight: 600;
 }
 
+/* Footer */
 
 .footer {
-    display: flex;
     background-color: #ff7f50;
-    flex-direction: column;
-    text-align: center;
-    padding: 100px 0;
-}
-
-.footer .social{
-    display: flex;
-    justify-content: center;
+    padding: 50px 0;
 }
 
 .footer h4{
     font-weight: 700;
     font-size: 2.5rem;
     margin-bottom: 20px;
+    text-align: center;
 }
 
-.footer nav {
+.footer .info {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.footer .info .redes,
+.expediente {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .info .social{
+    display: flex;
+    justify-content: center;
+}
+
+.footer  .nav-footer {
     margin: 50px 0;
 }
 
-.footer nav ul {
+.footer .nav-footer ul {
     display: flex;
     justify-content: center;
     max-width: 320px;
     margin: 0 auto;
 }
 
-.footer nav ul a{
+.footer  .nav-footer ul a{
     font-weight: 500;
     font-size: 2rem;
     margin: 20px;
 }
 
-.footer nav ul li a:hover{
+.footer  .nav-footer ul li a:hover{
     font-weight: 700;
     color: #fff;
     transition: 0.3s;
 }
 
-.footer .social i {
+.footer .info .social i {
     font-size: 2rem;
 }
 
-.footer .social a{
+.footer .info .social a{
     margin: 20px;
 }
 
-.footer .social a:hover{
+.footer .info .social a:hover{
     color: #fff;
-    transition: 0,3s;
+    transition: 0.3s;
+}
+
+.footer .info .expediente {
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.footer .info .expediente h3 {
+    font-weight: 600;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer .info .expediente p, .horario {
+    font-weight: 500;
+    padding: 10px;
 }
